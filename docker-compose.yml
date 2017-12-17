@@ -1,9 +1,5 @@
 version: '2'
 
-networks:
-  front:
-  back:
-
 services:  
      
   backend:
@@ -13,8 +9,6 @@ services:
     environment:
       - APPID=88510c0ca4c7d0e4f0ade76c22e6c641
       - TARGET_CITY=Tampere,fi
-    networks:
-      - back
 
   frontend:
     build: frontend/
@@ -22,5 +16,5 @@ services:
       - "8000:8000"
     environment:
       - ENDPOINT=http://localhost:9000
-    networks:
-      - front
+    links:
+      - backend
