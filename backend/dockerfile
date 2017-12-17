@@ -1,0 +1,7 @@
+FROM node
+ADD / /weatherapp/backend
+WORKDIR /weatherapp/backend
+RUN npm install
+
+EXPOSE 9000
+
