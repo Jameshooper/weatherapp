@@ -4,18 +4,7 @@ networks:
   front:
   back:
 
-services:
-
-  node:
-    image: node
-    links:
-      - backend
-    ports:
-     - "9000:9000"
-    networks:
-     - front
-     - back
-     
+services:  
      
   backend:
     build: backend/
