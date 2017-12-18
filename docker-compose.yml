@@ -7,7 +7,7 @@ services:
     ports:
       - "9000:9000"
     environment:
-      - APPID=88510c0ca4c7d0e4f0ade76c22e6c641
+      - APPID=
       - TARGET_CITY=Tampere,fi
 
   frontend:
